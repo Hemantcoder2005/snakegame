@@ -1,6 +1,16 @@
 #Installation of Modules if required.
 from os import system
-import requests
+import socket
+
+def check_internet():
+    try:
+        # attempt to connect to Google's DNS server
+        socket.setdefaulttimeout(5)
+        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(("8.8.8.8", 53))
+        return True
+    except socket.error:
+        # if the connection fails, return False
+        return False
 while True:
     try:
         #IMPORTING MODULES
@@ -10,17 +20,14 @@ while True:
         import time
         break
     except Exception as error:
-        url = "http://www.google.com"
-        timeout = 5 # seconds
-
-        try:
-            response = requests.get(url, timeout=timeout)
+        rep=check_internet()
+        if rep== True:
             print("Internet is connected")
             print("Some Modules are installing from server.")
             modules=['pygame','opencv-python','random','time']
             for module in modules:
                 system(f'pip install {module}')
-        except:
+        else:
             print("Internet is not connected....Please connect to internet for intial setup.")
 
 
