@@ -1,13 +1,49 @@
-# snakegame
-Welcome to my GitHub project - the Snake Game, a recreation of the classic game that we all remember playing on our old keypad mobile phones.
+# Snake Game
 
-This project aims to bring back the nostalgia and memories of simpler times when mobile phones were not as advanced as they are today. The Snake Game is a simple yet addictive game that requires you to guide a snake around a field, eating apples to grow longer. However, you must be careful not to collide with the walls or the snake's own body, or else it's game over.
-This version of the Snake Game is built using python It features smooth and responsive controls, retro-style graphics, and challenging gameplay that will keep you hooked for hours.
+## Description
+This is a simple Snake game implemented using Python's pygame library. The game allows players to control a snake to eat food and grow longer without hitting the walls or themselves.
 
-Whether you're a fan of the original Snake Game or simply looking for a fun and nostalgic gaming experience, this project is for you. Feel free to explore the code, contribute to the project, and relive those old memories of playing Snake on your trusty keypad mobile phone.
+## Installation
+To run this game, you need to have Python installed on your system. You can download Python from [here](https://www.python.org/downloads/).
 
-requirement:
-python environment,
-Strong Internet connection for intial setup.It will install modules from server with the help of pip.Once it done,then enjoy.
+After installing Python, you can follow these steps to set up and run the game:
 
-Whosoever wants to contribute,is welcomed.
+1. Clone this repository to your local machine using the following command:
+    ```
+    git clone https://github.com/Hemantcoder2005/snake-game.git
+    ```
+
+2. Navigate to the project directory:
+    ```
+    cd snake-game
+    ```
+
+3. Install the required Python packages by running:
+    ```
+    pip install -r requirements.txt
+    ```
+
+## Usage
+Once you have installed the required packages, you can run the game by executing the `main.py` file:
+
+## Controls
+- Use the arrow keys to control the movement of the snake.
+- Click 'Cross on window' to quit the game.
+
+## Features
+- Colorful graphics and sound effects.
+- Keeps track of the player's score and highest score.
+- Game over screen with the option to play again.
+
+## File Structure
+- `main.py`: Contains the main game logic.
+- `requirements.txt`: Lists all the Python packages required to run the game.
+- `photos/`: Directory containing images used in the game.
+- `sounds/`: Directory containing sound files used in the game.
+- `video/`: Directory containing video files used in the game.
+
+## Credits
+- This game was developed by [Hemant Narula](https://github.com/Hemantcoder2005).
+- Sound effects obtained from [freesound.org](https://freesound.org/).
+
+

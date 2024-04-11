@@ -1,36 +1,7 @@
-#Installation of Modules if required.
-from os import system
-import socket
-
-def check_internet():
-    try:
-        # attempt to connect to Google's DNS server
-        socket.setdefaulttimeout(5)
-        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(("8.8.8.8", 53))
-        return True
-    except socket.error:
-        # if the connection fails, return False
-        return False
-while True:
-    try:
-        #IMPORTING MODULES
-        import pygame
-        import cv2
-        import random
-        import time
-        break
-    except Exception as error:
-        rep=check_internet()
-        if rep== True:
-            print("Internet is connected")
-            print("Some Modules are installing from server.")
-            modules=['pygame','opencv-python','random','time']
-            for module in modules:
-                system(f'pip install {module}')
-        else:
-            print("Internet is not connected....Please connect to internet for intial setup.")
-
-
+import pygame
+import cv2
+import random
+import time
 
 pygame.init()
 
@@ -187,8 +158,8 @@ while run:
             SnakeHisses.play()
             yummy.play()
             #GENERATING FOOD RANDOM ON SCREEN
-            food_x =random.randint(20,screen_width/2)
-            food_y =random.randint(20,screen_height/2)
+            food_x =random.randint(20,screen_width//2)
+            food_y =random.randint(20,screen_height//2)
             #INCREASING SNAKE LENGTH
             snake_length+=2
         if snake_x==food_x+100 and snake_y==food_y+100 :
